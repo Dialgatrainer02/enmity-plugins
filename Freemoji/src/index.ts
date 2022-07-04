@@ -88,7 +88,7 @@ const Freemoji: Plugin = {
             if (e.guildId !== channel.guild_id || e.animated) {
               message.content = message.content.replace(
                 `<${e.animated ? "a" : ""}:${e.originalName ?? e.name}:${e.id}>`,
-                e.url.replace("webp", "png").replace(/size=\d+/, "size=48")
+                e.url.replace("webp", "png").replace(/size=\d+/, "size=512")
               )
               delete message.validNonShortcutEmojis[i];
             }
